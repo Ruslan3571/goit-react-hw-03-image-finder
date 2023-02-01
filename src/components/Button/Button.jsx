@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import s from './Button.module.css';
 
 export function Button({ onShow }) {
@@ -9,3 +10,6 @@ export function Button({ onShow }) {
     </div>
   );
 }
+Button.propTypes = {
+  onShow: PropTypes.func,
+};
