@@ -24,6 +24,9 @@ export class App extends Component {
       getImage(query, page).then(res => {
         if (!res.hits.length) {
           alert(`Please, try another one`);
+          this.setState({
+            isLoading: false,
+          });
           return;
         }
         this.setState({
